@@ -23,11 +23,11 @@ class QueueTests(unittest.TestCase):
         self.q.enqueue(16)
         self.q.enqueue(18)
         self.assertEqual(self.q.len(), 9)
-
+    #
     def test_empty_dequeue(self):
         self.assertIsNone(self.q.dequeue())
         self.assertEqual(self.q.len(), 0)
-
+    #
     def test_dequeue_respects_order(self):
         self.q.enqueue(100)
         self.q.enqueue(101)
